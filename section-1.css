@@ -12,6 +12,9 @@
     position: fixed;
 
     border-bottom: 2px solid #ecd1b3;
+    background-color: #f9f1e6;
+
+    z-index: 10;
 }
 
 .navbar{
