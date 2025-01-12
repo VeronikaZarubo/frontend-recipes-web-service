@@ -27,7 +27,7 @@
 }
 
 .navbar-logo{
-    background-image: url(../projekt/Images/logo2_pol_bezbg.png);
+    background-image: url(./Images/logo2_pol_bezbg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -83,10 +83,27 @@ li.navbar-links-list-item a{
     width: 25px;
     height: 25px;    
     margin-bottom: 45px; 
-    background-image: url(../projekt/Images/logout_bezbg.png); 
+    background-image: url(./Images/logout_bezbg.png); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.navbar-profile-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 25px;
+    height: 25px;    
+    margin-bottom: 45px; 
+    background-image: url(./Images/profile_bezbg.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 

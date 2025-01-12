@@ -17,24 +17,25 @@
     <nav>
         <div class="navbar-outer">
             <div class="navbar">
-                <div class="navbar-logo"></div>
+                <a href="menu.html"><div class="navbar-logo"></div></a>
                 <div class="navbar-links">
                     <ul class="navbar-links-list">
                         <li class="navbar-links-list-item">
                             <a href="menu.html" class="primary">Home</a>
                         </li>
                         <li class="navbar-links-list-item">
-                            <a href="#about-us" class="primary">O nas</a>
+                            <a href="#about-us" class="primary">Posty</a>
                         </li>
                         <li class="navbar-links-list-item">
-                            <a href="#" class="primary">Products</a>
+                            <a href="#" class="primary">Strona informacyjna</a>
                         </li>
                         <li class="navbar-links-list-item">
                             <a href="#contact" class="primary">Kontakt</a>
                         </li>
                     </ul>
                 </div>
-                <div class="navbar-cart-button"></div>
+                <a href="profile.html"><div class="navbar-profile-button"></div></a>
+                <a href="index.html"><div class="navbar-cart-button"></div></a>
             </div>
         </div> 
     </nav>
@@ -44,9 +45,15 @@
     </header>
 
     <main>
-        <section div class="wrapper start-image">
-            <h1>Welcome!!</h1>
-        </section>
+        <div class="home">
+            <div class ="home-text">
+                <h1 style="color:#804f17">Spróbuj słodkość życia z tradycyjnymi polskimi wypiekami!!</h1>
+            </div>
+            <div class="home-start-image">
+
+
+            </div>
+        </div>
 
         <section id="about-us" class="wrapper">
             <h2>O nas</h2>
@@ -73,10 +80,27 @@
         <section class="parallax"></section>
 
         <section id="contact" class="wrapper">
-            <h2>Napisz do nas</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tenetur tempore praesentium numquam eaque quam perferendis quasi quod eum laboriosam.</p>
-            <p>Quisquam, saepe quas. Sint et recusandae eum, ea assumenda ipsa eveniet ullam explicabo culpa. Soluta sunt similique sequi magnam hic.</p>
-            
+            <div class="container">
+                <h2 style="color:bisque;">Skontaktuj się z nami!</h2> <br>
+            <form action="/action_page.php" style="color:bisque;">
+                <label for="fname">Imię</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Nazwisko</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="kraj">Kraj</label>
+                <select id="kraj" name="kraj">
+                <option value="polska">Polska</option>
+                <option value="inny-kraj">Inny kraj</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            </div>
         </section>  
         
         <br>

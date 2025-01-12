@@ -21,12 +21,12 @@ body{
 
 section{
     scroll-margin-top:80px;
-    height: 300px;
-    background: #e5a0a0;
+    /*height: 300px;
+    background: #e5a0a0;*/    
 }
 
 section h2{
-    margin: 120px;
+    /*margin: 120px;*/
     text-align: center;
 }
 
@@ -39,10 +39,81 @@ section h2{
     color:#804f17;
 }
 
-.start-image{
-    text-align: center;
+.home{
+    text-align: left;
+    scroll-margin-top:80px;
+    height: 500px;
+    margin-top: 140px;
     
     background: #e6c8c8;
 
-    margin: 120px    
+    margin: 120px        
 }
+
+.home-text{
+    height: 300px;
+    background: #b1c1ed;
+
+    padding-left: 16px;
+    order: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    
+    text-align: left;
+}
+
+.home-start-image{
+    height: 300px;
+    background: #b8edb1;
+    margin-left: 50%;
+    margin-right: 50px;
+    /*clip-path: polygon(8% 90%, 0 70%, 0 35%, 8% 14%, 22% 0, 80% 0, 92% 13%, 100% 36%, 100% 69%, 92% 89%, 80% 100%, 20% 100%);*/
+    border-radius: 50px / 15px;
+    padding: 20px;
+    border: 5px solid #e6f789;
+    
+
+    background-image: url(./Images/paczki2.jpg);    
+    
+    padding-left: 16px;
+    order: 1;
+
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ecd1b3; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+ 
+  input[type=submit] {
+    background-color: bisque;
+    color: #804f17;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+  input[type=submit]:hover {
+    background-color: #f9f1e6;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #804f17;
+    padding: 20px;
+  }
+
+footer{
+    text-align: center;
+}
+
