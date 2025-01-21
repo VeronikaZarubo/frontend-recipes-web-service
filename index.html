@@ -3,39 +3,128 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pączkarnia</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Dom Pączków</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="section-1.css">
+        <link rel="stylesheet" href="section-2.css">
+
+
         <link rel="icon" href="Images/icon.ico" type="image/x-icon"/>
     </head>
-<body>
-    <header>
-        <h2><a href="menu.html">Dom Pączków</a></h2>
-        <nav>
-
-        </nav>
-    </header>
-
+<body>    
     <main>
-        <form action="/login">
+        <div class="navbar-outer">
+            <div class="navbar">
+                <a href="index.html"><div class="navbar-logo"></div></a>
+                <div class="navbar-links">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-links-list-item">
+                            <a href="#home" class="primary">Home</a>
+                        </li>
+                        <li class="navbar-links-list-item">
+                            <a href="#posty" class="primary">Posty</a>
+                        </li>
+                        <li class="navbar-links-list-item">
+                            <a href="#info" class="primary">Strona informacyjna</a>
+                        </li>
+                        <li class="navbar-links-list-item">
+                            <a href="#contact" class="primary">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="profile.html"><div class="navbar-profile-button"></div></a>
+                <a href="login.html"><div class="navbar-cart-button"></div></a>
+            </div>
+        </div>
 
-            <fieldset>
-                <legend>Log In</legend>
-                <p>
-                    <label for ="login_id">Login</label>
-                    <input type="text" name="login" id = "login_id">
-                </p>                
-                <p>
-                    <label for ="password_id">Hasło</label>
-                    <input type="password" name="password" id = "password_id">
-                </p>
-                <p>
-                    <a href="menu.html"><input type="button" value="Zaloguj się"></a>
+        <div id="home" class="section-2">
+            <div class ="section-2-inner">
+                <div class="section-2-container">
+                    <div class="section-2-left-img"></div>
+                    <div class="section-2-right-img-wrapper">
+                        <div class="section-2-right-img"></div>
+                    </div>
+                </div>
+                <div class="section-2-buttons">
+                    <div class="section-2-button-prev"></div>
+                    <div class="section-2-button-next"></div>
+                </div>           
+            </div>
+        </div>
+        
+        <section id="about-us" class="wrapper">
+            <h2>O nas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tenetur tempore praesentium numquam eaque quam perferendis quasi quod eum laboriosam.</p>
+            <p>Quisquam, saepe quas. Sint et recusandae eum, ea assumenda ipsa eveniet ullam explicabo culpa. Soluta sunt similique sequi magnam hic.</p>
+        </section>
 
-                    <a href="index.html">Wyczyść</a>
+        <section id="posty" class="wrapper">
+            <div class="posty">
+                <h1 style="color:bisque; margin: 25px;">Najnowsze posty</h1>
+                <table style="width:100%; margin-bottom: 25px;;">
+                    <tr style="color:bisque">
+                    <th> 
+                        <img src="Images/paczki2.jpg" alt="post-image" style="width: 100%; max-width: 300px;"> 
+                        <h2>Nadychodzi Tłusty Czwatek!</h2>
+                        <h3>Zobacz więcej &rarr;</h3>
+                    </th>
+                    <th> 
+                        <img src="Images/makowiec1.jpg" alt="post-image"  style="width: 100%; max-width: 300px;"> 
+                        <h2>Niesamowity makowiec</h2>
+                        <h3>Zobacz więcej &rarr;</h3>
+                    </th>
+                    <th> 
+                        <img src="Images/tlusy-czwartek.jpeg" alt="post-image" style="width: 100%; max-width: 300px;"> 
+                        <h2>Święta? Mamy przepis!</h2>
+                        <h3>Zobacz więcej &rarr;</h3>
+                    </th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="info" class="wrapper">
+            <h2 style="color: #804f17;">Strona informacyjna</h2>
+                <p style="color: #804f17;">
+                    1.Nazwa i wersja przeglądarki pod którą serwis był testowany. Zaleca się, aby serwis dobrze wyglądał pod każdą przeglądarką.
+                    <br>
+                    2. Veronika Zarubo 417272 "Podstawy technologii internetowych" II rok akademicki
+                    <br>
+                    3. Link do pliku ze specyfikacją w postaci pliku pdf, link powinien otworzyć się w nowej zakładce</p>
                 </p>
-      
-              </fieldset>
-        </form>        
+        </section>
+
+        <section class="parallax"></section>
+
+        <section id="contact" class="wrapper">
+            <div class="container">
+                <h2 style="color:bisque;">Skontaktuj się z nami!</h2> 
+                <br>
+            <form action="/action_page.php" style="color:bisque;">
+                <label for="fname">Imię</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Nazwisko</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="kraj">Kraj</label>
+                <select id="kraj" name="kraj">
+                <option value="polska">Polska</option>
+                <option value="inny-kraj">Inny kraj</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+        </section> 
+        <br>
     </main>
 
     <footer>
