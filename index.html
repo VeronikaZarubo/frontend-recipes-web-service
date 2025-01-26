@@ -3,25 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dom Pączków</title>
+        <title>Dom Pączków</title>        
         
-        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
         <link rel="stylesheet" href="layout.css">
         <link rel="stylesheet" href="section-1.css">
         <link rel="stylesheet" href="section-2.css">
 
-
         <link rel="icon" href="Images/icon.ico" type="image/x-icon"/>
     </head>
-<body>    
-    <main>
+<body>  
+    <nav>
         <div class="navbar-outer">
             <div class="navbar">
                 <a href="index.html"><div class="navbar-logo"></div></a>
                 <div class="navbar-links">
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                    </label>
                     <ul class="navbar-links-list">
+                        <!-- <li><button class="burger-icon"><i class="ti ti-menu-2"></i></button></li> -->
                         <li class="navbar-links-list-item">
                             <a href="#home" class="primary">Home</a>
                         </li>
@@ -37,9 +39,11 @@
                     </ul>
                 </div>
                 <a href="profile.html"><div class="navbar-profile-button"></div></a>
-                <a href="login.html"><div class="navbar-cart-button"></div></a>
+                <a href="login.html"><div class="navbar-logout-button"></div></a>
             </div>
         </div>
+    </nav>  
+    <main>        
 
         <div id="home" class="section-2">
             <div class ="section-2-inner">
@@ -66,7 +70,7 @@
             <div class="posty">
                 <h1 style="color:bisque; margin: 25px;">Najnowsze posty</h1>
                 <table style="width:100%; margin-bottom: 25px;;">
-                    <tr style="color:bisque">
+                    <tr>
                     <th> 
                         <img src="Images/paczki2.jpg" alt="post-image" style="width: 100%; max-width: 300px;"> 
                         <h2>Nadychodzi Tłusty Czwatek!</h2>
@@ -97,8 +101,6 @@
                     3. Link do pliku ze specyfikacją w postaci pliku pdf, link powinien otworzyć się w nowej zakładce</p>
                 </p>
         </section>
-
-        <section class="parallax"></section>
 
         <section id="contact" class="wrapper">
             <div class="container">
