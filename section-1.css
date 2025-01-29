@@ -11,7 +11,7 @@
     top: 0;
     position: fixed;
 
-    border-bottom: 2px solid #ecd1b3;
+    border-bottom: 2px solid #b98850;
     background-color: #f9f1e6;
 
     z-index: 9;
@@ -33,7 +33,7 @@
     background-position: center;
     width: 121px;
     height: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
@@ -48,7 +48,6 @@
 ul.navbar-links-list{
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     align-items: stretch;    
 }
@@ -59,7 +58,6 @@ li.navbar-links-list-item{
     justify-content: flex-end;
     align-items: center;
     color: black;
-    border-bottom: 4px solid transparent;
 }
 
 li.navbar-links-list-item:hover{    
@@ -67,9 +65,7 @@ li.navbar-links-list-item:hover{
 }
 
 li.navbar-links-list-item a{
-    margin-bottom: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 40px 20px 40px;
     text-decoration: none;
     font-size: 0.7cm;
     font-weight: 500;
@@ -116,7 +112,6 @@ li.navbar-links-list-item a{
     display: none;
     height: 100%;
     width: 30px;
-    cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -137,14 +132,6 @@ li.navbar-links-list-item a{
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;    
     cursor: pointer;
-
-    
-        /* margin-left: auto;
-        padding: 0 30px;
-        
-        border: none;
-        background: none;
-        transition: 0.3s; */
   }
   
   .menu-button::before {
@@ -171,20 +158,18 @@ li.navbar-links-list-item a{
     transform: rotate(-405deg);
   }
   
-  @media (max-width: 790px) {
+  @media (max-width: 800px) {
     nav a{
         display: inline;
     }
     .menu-button-container {
       display: flex;
-      /* margin-bottom: 40px;
-      margin-left: 20px;
-      margin-right: 20px; */
+      margin: 0 20px 56px;
     }
     .navbar-links-list {
       position: absolute;
       top: 0;
-      margin-top: 50px;
+      margin-top: 115px;
       left: 0;
       flex-direction: column;
       width: 100%;
@@ -194,78 +179,293 @@ li.navbar-links-list-item a{
     #menu-toggle ~ .navbar-links-list li {
       height: 0;
       margin: 0;
-      padding: 0;
-      border: 0;
+      flex-direction: row;
       transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     #menu-toggle:checked ~ .navbar-links-list li {
-      border: 1px solid #333;
-      height: 2.5em;
-      padding: 0.5em;
+      height: 4em;
+      width: 100%;
       transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      padding: 10px ;
     }
     .navbar-links-list > li {
       display: flex;
       justify-content: center;
       margin: 0;
-      padding: 0.5em 0;
       width: 100%;
       color: white;
-      background-color: #f9f1e6;
+      background-color: #f9f1e6e1;
     }
     .navbar-links-list > li:not(:last-child) {
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid #804f17;
     }
+
   }
 
-/* nav{
-    position: sticky;
-    top: 0;
-    background-color: #7c3535;
-    height: 60px;
-    text-align: center;         
-    z-index: 10;
+  .section-2{
+    width: 100vw;
+    height:620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        #d0ae84 0%,
+        #d0ae84 55%,
+        #dfc09b 55%,
+        #dfc09b 100%
+    );
+    margin-top: 120px;
+    scroll-margin-top:120px;
 }
-.burger-icon{
-    display: block;
-    margin-left: auto;
-    padding: 0 30px;
-    font-size: 30px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: 0.3s;
 
-    background-image: url(./Images/profile_bezbg.png); 
+.section-2-inner{
+    width: 1200px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 87%;
 }
-.burger-icon:hover{
-    color: #0a2;
+
+.section-2-container{
+    flex: 10;
+    background:transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
 }
-.li.navbar-links-list-item a{
-    display: none;
-    background-color: #0a2;
+
+.section-2-buttons{
+    flex: 1;
+    max-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    cursor: pointer;
 }
-.show{
-    display: block;
+
+.section-2-button-prev,
+.section-2-button-next{
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
 }
-navbar a{
+
+.section-2-button-prev:hover,
+.section-2-button-next:hover{
+    background-color: #b98850;
+}
+
+.section-2-button-prev{
+    background-image: url(Images/arrowLeft.png);    
+}
+
+.section-2-button-next{
+    background-image: url(Images/arrowRight.png);
+}
+
+.section-2-left-img{
+    height: 100%;   
+    width: 75%;
+    background: blue;
+    background-image: url(Images/sernik.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-2-right-img-wrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.section-2-right-img{   
+    background:#b98850;
+    width: 40%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     
-    text-decoration: none;
-    padding: 0 30px;
-    font-weight: 600;
-    transition: color 0.3s;
 } 
 
-@media (min-width: 768px){
-    .burger-icon{
-        display: none;
-    }
-    .li.navbar-links-list-item{
-        display: block;
-        background-color: #765050;
-    }
-    navbar a{
-        display: inline;
-    }
-} */
+.section-2-right-img-content{
+    color:ivory;
+    flex: 1;
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section-2-right-img-subtitle, .section-2-right-img-button a{
+    font-family: serif;
+    font-size: 0.9em;    
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-image: url(/Images/gotowanie.jpg);
+}
+
+.section-2-right-img-title{
+    font-size: 3em;
+}
+
+.section-2-right-img-button a{
+  text-decoration: none;
+    height: 35px;
+    color:ivory;
+    border-bottom: 2px solid ivory;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+  height: 100%;
+}
+
+body{
+    font-family: Cormorant Garamond, sans-serif; 
+    background-color: #f9f1e6;
+}
+
+.wrapper{
+    margin: 60px auto 50px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.wrapper h2, p{
+  margin: 0 10px;
+}
+
+.recipe-main img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
+section{
+    scroll-margin-top:140px;    
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#about-us, #info, h2 p{
+    margin-bottom: 20px;
+    padding: 0 20px;
+    color: #804f17;
+}
+
+#info a{
+    color: #be1961;
+    text-decoration: none;
+}
+#info a:hover{
+  color: #f0a00c;
+}
+
+.primary{
+    color:#804f17;
+}
+
+.posty{
+  background-color: #804f17;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.posty h2{
+  text-align: left;
+  padding: 10px 20px 20px;
+}
+
+.posty h3{
+  text-align: left;
+  padding: 10px 20px 20px;
+}
+
+table img {
+  margin: 8px -16px;
+  object-fit: cover;
+}
+
+table, th, td {
+  border:1px solid bisque;
+  border-collapse: collapse;
+  table-layout: fixed ;
+  color: bisque;
+
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ecd1b3; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+ 
+  input[type=submit] {
+    background-color: bisque;
+    color: #804f17;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+  input[type=submit]:hover {
+    background-color: #f9f1e6;
+  }
+  
+  .container{
+    background-color: #804f17;
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  .container h2{
+    margin-top: 30px;
+  }
+
+footer{
+    text-align: center;
+}
+
+
 

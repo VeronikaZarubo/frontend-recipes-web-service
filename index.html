@@ -6,9 +6,7 @@
         <title>Dom Pączków</title>        
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
-        <link rel="stylesheet" href="layout.css">
         <link rel="stylesheet" href="section-1.css">
-        <link rel="stylesheet" href="section-2.css">
 
         <link rel="icon" href="Images/icon.ico" type="image/x-icon"/>
     </head>
@@ -16,7 +14,7 @@
     <nav>
         <div class="navbar-outer">
             <div class="navbar">
-                <a href="index.html"><div class="navbar-logo"></div></a>
+                <div class="navbar-logo"></div>
                 <div class="navbar-links">
                     <input id="menu-toggle" type="checkbox" />
                     <label class='menu-button-container' for="menu-toggle">
@@ -43,22 +41,81 @@
             </div>
         </div>
     </nav>  
-    <main>        
+    <main>  
 
         <div id="home" class="section-2">
             <div class ="section-2-inner">
                 <div class="section-2-container">
                     <div class="section-2-left-img"></div>
                     <div class="section-2-right-img-wrapper">
-                        <div class="section-2-right-img"></div>
-                    </div>
+                        <div class="section-2-right-img">
+                            <div class="section-2-right-img-content">
+                                <div class="section-2-right-img-subtitle">
+                                    NOWOŚĆ
+                                </div>
+                                <div class="section-2-right-img-title">
+                                    Najnowszy przepis na sernik
+                                </div>
+                                <div class="section-2-right-img-button">
+                                    <a href="sernik.html">Zobacz teraz!</a>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>                    
                 </div>
                 <div class="section-2-buttons">
-                    <div class="section-2-button-prev"></div>
-                    <div class="section-2-button-next"></div>
+                    <div id="prev" class="section-2-button-prev"></div>
+                    <div id="next" class="section-2-button-next"></div>
                 </div>           
             </div>
         </div>
+
+        <script>
+            var images = ["url('Images/sernik.jpg')", "url('Images/gotowanie.jpg')"];
+            var i = 0;
+        
+            const sectionLeftImg = document.getElementById('.section-2-left-img');
+
+            // const prevButton = document.getElementById('prev');
+            // const nextButton = document.getElementById('next');
+
+            document.getElementById('prev').addEventListener('click', function(){
+
+                if(i<=images.length-2){
+                    i = ++i;
+                }
+                else{
+                    i = 0;
+                }
+                sectionLeftImg.backgroundImage = images[i];
+            });
+
+            document.getElementById('next').addEventListener('click', function(){
+
+            if(i<=images.length-2){
+                i = ++i;
+            }
+            else{
+                i = 0;
+            }
+            sectionLeftImg.backgroundImage = images[i];
+            });                          
+            
+        
+            // function updateBackground() {
+            //     sectionLeftImg.style.backgroundImage = url('${images[currentIndex]}');
+            // }
+        
+            // prevButton.addEventListener('click', () => {
+            //   currentIndex = (currentIndex - 1 + images.length) % images.length;
+            //   updateBackground();
+            // });
+        
+            // nextButton.addEventListener('click', () => {
+            //   currentIndex = (currentIndex + 1) % images.length;
+            //   updateBackground();
+            // });
+          </script>
         
         <section id="about-us" class="wrapper">
             <h2>O nas</h2>
@@ -92,13 +149,13 @@
         </section>
 
         <section id="info" class="wrapper">
-            <h2 style="color: #804f17;">Strona informacyjna</h2>
-                <p style="color: #804f17;">
+            <h2>Strona informacyjna</h2>
+                <p>
                     1.Nazwa i wersja przeglądarki pod którą serwis był testowany. Zaleca się, aby serwis dobrze wyglądał pod każdą przeglądarką.
                     <br>
                     2. Veronika Zarubo 417272 "Podstawy technologii internetowych" II rok akademicki
                     <br>
-                    3. Link do pliku ze specyfikacją w postaci pliku pdf, link powinien otworzyć się w nowej zakładce</p>
+                    3. Link do pliku ze <a href="./Specyfikacja projektowa Pączki VZ.pdf" target="_blank">specyfikacją w postaci pliku pdf.</a>
                 </p>
         </section>
 
