@@ -64,42 +64,56 @@
                     </div>                    
                 </div>
                 <div class="section-2-buttons">
-                    <div id="prev" class="section-2-button-prev"></div>
-                    <div id="next" class="section-2-button-next"></div>
+                    <div class="section-2-button-prev"></div>
+                    <div class="section-2-button-next"></div>
                 </div>           
             </div>
         </div>
 
         <script>
-            var images = ["url('Images/sernik.jpg')", "url('Images/gotowanie.jpg')"];
+            var images = ["url('Images/sernik.jpg')","url('Images/gotowanie.jpg')"];
             var i = 0;
         
-            const sectionLeftImg = document.getElementById('.section-2-left-img');
+            var sectionLeftImg = document.getElementsByClassName('section-2-left-img');
 
-            // const prevButton = document.getElementById('prev');
+            const prevButton = document.getElementsByClassName('section-2-button-prev');
             // const nextButton = document.getElementById('next');
 
-            document.getElementById('prev').addEventListener('click', function(){
+            // document.getElementsByClassName('section-2-button-prev').addEventListener('click', function(){
+            //     document.body.style.getElementsByClassName('section-2-left-img').backgroundImage = images[1]
+            // });
+            function ImgChange()
+            {
+                sectionLeftImg.style.backgroundImage= images[i];
+            };
 
-                if(i<=images.length-2){
-                    i = ++i;
-                }
-                else{
-                    i = 0;
-                }
-                sectionLeftImg.backgroundImage = images[i];
-            });
-
-            document.getElementById('next').addEventListener('click', function(){
-
-            if(i<=images.length-2){
-                i = ++i;
+            for (i = 0; i < images.length; i++) {
+                prevButton.addEventListener("click", ImgChange);
             }
-            else{
-                i = 0;
-            }
-            sectionLeftImg.backgroundImage = images[i];
-            });                          
+            
+            
+            // ('click', function(){
+
+                // if(i<=1){
+                //     i = ++i;
+                // }
+                // else{
+                //     i = 0;
+                // }
+                // sectionLeftImg.backgroundImage = images[1]
+                // document.body.style.backgroundImage = images[1]
+            // });
+
+            // document.getElementsByClassName('section-2-button-prev').addEventListener('click', function(){
+
+            // if(i<=images.length-2){
+            //     i = ++i;
+            // }
+            // else{
+            //     i = 0;
+            // }
+            // sectionLeftImg.backgroundImage = images[i];
+            // });                          
             
         
             // function updateBackground() {
