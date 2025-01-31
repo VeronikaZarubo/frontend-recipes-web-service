@@ -520,7 +520,7 @@ input[type=text], select, textarea {
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical;
   }
  
   input[type=submit] {
@@ -532,7 +532,7 @@ input[type=text], select, textarea {
     cursor: pointer;
   }
  
-  input[type=submit]:hover {
+  input[type=submit]:hover{
     background-color: #f9f1e6;
   }
   
@@ -557,7 +557,6 @@ input[type=text], select, textarea {
   }
 
   .container img{
-    background-image: linear-gradient(rgba(96, 51, 0, 0.5),rgba(96, 51, 0, 0.5)), url('Images/sernik.jpg');
     max-height: 500px;
     height: auto;
     background-position: center;
@@ -572,9 +571,46 @@ input[type=text], select, textarea {
     color:bisque;
   }
 
+  .profile-content{
+    margin: 140px 10px;
+    scroll-margin-top:120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+
+  .profile-content h2, h3{
+    color: #804f17;
+  }
+
+  .profile-tekst{
+    flex: 1;
+  }
+
+  .profile-content img{
+    border: 2px solid #804f17;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+
+  .profile-content input[type=submit] {
+    background-color: #b98850;
+    color: #ecd1b3;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .profile-content input[type=submit]:hover{
+    background-color: #f0a00c;
+  }
+
 footer{
-    text-align: center;
+  text-align: center;
 }
-
-
 
