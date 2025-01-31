@@ -391,6 +391,28 @@ body{
   margin: 0 10px 10px 10px;  
 }
 
+.recipe-hero-img-faworki{  
+  margin-top: 120px;
+  height: 300px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(96, 51, 0, 0.5),rgba(96, 51, 0, 0.5)), url('Images/faworki.jpg');
+}
+
+.recipe-hero-img-pierniczki{  
+  margin-top: 120px;
+  height: 300px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(96, 51, 0, 0.5),rgba(96, 51, 0, 0.5)), url('Images/pierniczki.jpg');
+}
+
 .recipe-hero-img-makowiec{  
   margin-top: 120px;
   height: 300px;
