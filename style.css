@@ -421,7 +421,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: linear-gradient(rgba(96, 51, 0, 0.5),rgba(96, 51, 0, 0.5)), url('Images/makowiec2Big.jpg');
+  background-image: linear-gradient(rgba(96, 51, 0, 0.5),rgba(96, 51, 0, 0.5)), url('Images/makowiec2.jpg');
 }
 .recipe-hero-img-sernik{
   margin-top: 120px;
@@ -460,8 +460,37 @@ section{
   color:bisque;
   margin: 25px;
 }
-#posty h2, h3{
+#posty h2, a{
   color:bisque;
+  text-decoration: none;
+}
+
+.posty img{
+  border: 2px solid #804f17;
+  max-height: 300px;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.posty{
+  background-color: #804f17;
+  padding: 20px;
+  border-radius: 25px;  
+}
+
+.post{
+  border: 2px solid #ecd1b3;
+  border-radius: 25px;
+  padding: 20px;
+
+  margin: 40px 10px;
+  scroll-margin-top:120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 #about-us, #info, h2 p{
@@ -481,22 +510,6 @@ section{
 
 .primary{
     color:#804f17;
-}
-
-.posty{
-  background-color: #804f17;
-  padding: 20px;
-  border-radius: 25px;
-}
-
-.posty h2{
-  text-align: left;
-  padding: 10px 20px 20px;
-}
-
-.posty h3{
-  text-align: left;
-  padding: 10px 20px 20px;
 }
 
 table img {

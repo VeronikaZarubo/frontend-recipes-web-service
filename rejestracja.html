@@ -13,31 +13,32 @@
     </header>
 
     <main>
-        <form action="/login">
+        <fieldset>
+            <legend>Rejestracja</legend>
+            
+            <label for ="login_id">Login</label>
+            <input type="text" name="login" id = "login_id">
+                            
+            
+            <label for ="password_id">Hasło</label>
+            <input type="password" name="password" id = "password_id">
+            
+            
+            <label for ="password_id">Powtórz hasło</label>
+            <input type="password" name="login" id = "password_id2">       
+                
+            <form action="login.html">
+                <input type="submit" value="Utwórz konto">
+            </form> 
 
-            <fieldset>
-                <legend>Rejestracja</legend>
-                <p>
-                    <label for ="login_id">Login</label>
-                    <input type="text" name="login" id = "login_id">
-                </p>                
-                <p>
-                    <label for ="password_id">Hasło</label>
-                    <input type="password" name="password" id = "password_id">
-                </p>
-                <p>
-                    <label for ="password_id">Powtórz hasło</label>
-                    <input type="password" name="login" id = "password_id2">
-                </p>
-                <p>
-                    <a href="index.html"><input type="button" value="Utwórz konto"></a>
+            <a href="rejestracja.html">Wyczyść</a>            
 
-                    <a href="rejestracja.html">Wyczyść</a>
-                </p>
-                <a href="login.html"><input type="button" value="Już masz konto? Zaloguj się!"></a>
-      
-              </fieldset>
-        </form>        
+            <form action="login.html">
+                <input type="submit" value="Już masz konto? Zaloguj się!">
+            </form> 
+
+        </fieldset>  
+            
     </main>
 
     <footer>
