@@ -11,6 +11,22 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="icon" href="Images/icon.ico" type="image/x-icon">
+
+        <script>    
+            function fillForm() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const title = urlParams.get('title');
+                const description = urlParams.get('description');
+    
+                if (title) {
+                    document.getElementById('title').value = decodeURIComponent(title);
+                }
+                if (description) {
+                    document.getElementById('description').value = decodeURIComponent(description);
+                }
+            }                
+            window.onload = fillForm;
+        </script>
     </head>
 <body>  
     <nav>
@@ -19,6 +35,7 @@
                 <div class="navbar-logo"></div>
                 <div class="navbar-links">
                     <ul id="navbar-links-list" class="navbar-links-list">
+                        <!-- <li><button class="burger-icon"><i class="ti ti-menu-2"></i></button></li> -->
                         <li class="navbar-links-list-item">
                             <a href="index.html#home" class="primary">Home</a>
                         </li>
@@ -44,7 +61,7 @@
             </div>
         </div>
     </nav>   
-    <main> 
+    <main>
         <script>
             function myFunction() {
             var x = document.getElementById("navbar-links-list");
@@ -78,43 +95,23 @@
                 }         
             }, true);
         </script>
+
         <div class="wrapper">            
             <div class="profile-content">
-                <h1>Użytkowniki</h1>
-                <div class="row">
-                    <table class="posts">
-                        <tr>
-                            <th>Imię i nazwisko</th>
-                            <th>Email</th>
-                        </tr>
-                        <tr>
-                            <td>Jan Kowalski<br>
-                                <input type="submit" value="Edytuj">
-                            </td>
-                            <td>jankowalski@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Anna Nowak<br>
-                                <input type="submit" value="Edytuj">
-                            </td>
-                            <td>annanowak@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Zofia Nowak<br>
-                                <input type="submit" value="Edytuj">
-                            </td>
-                            <td>zofianowak@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Jakub Wróbel<br>
-                                <input type="submit" value="Edytuj">
-                            </td>
-                            <td>jakubwrobel@gmail.com</td>
-                        </tr>
-                    </table>
-                </div>       
+                <h1>Edycja ogłoszenia</h1>
+                <form id="post" action="posty.html" method="GET">
+
+                    <label for="title">Tytuł ogłoszenia:</label>
+                    <input type="text" id="title" name="title" required>    
+
+                    <label for="description">Opis ogłoszenia:</label>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+                    <button type="submit">Zatwierdź zmiany</button>
+                </form>
+                                   
             </div>
-        </div>        
+        </div>
     </main>
 
     <footer>

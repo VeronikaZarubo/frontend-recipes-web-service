@@ -10,7 +10,23 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="icon" href="Images/icon.ico" type="image/x-icon">
+        <link rel="icon" href="Images/icon.ico" type="image/x-icon">       
+
+        <script>
+            function editArticle() {
+                const title = encodeURIComponent(document.getElementById("title").innerText);
+                const description = encodeURIComponent(document.getElementById("description").innerText);
+                
+                window.location.href = `edycja.html?title=${title}&description=${description}`;
+            }
+
+            function editArticle2() {
+                const title2 = encodeURIComponent(document.getElementById("title2").innerText);
+                const description2 = encodeURIComponent(document.getElementById("description2").innerText);
+                
+                window.location.href = `edycja.html?title=${title2}&description=${description2}`;
+            }
+        </script>
     </head>
 <body>  
     <nav>
@@ -82,43 +98,26 @@
         <div class="wrapper">            
             <div class="profile-content">
                 <h1>Posts</h1>
-                <div class="row">
-                    <table class="posts">
-                        <tr>
-                            <th>Ogłoszenia</th>
-                            <th>Data utworzenia</th>
-                            <th>Autor</th>
-                        </tr>
-                        <tr>
-                            <td>Najnowsze wiadomości<br>
-                                <input type="submit" value="Edytuj">
-                                <input type="submit" value="Usuń"></td>
-                            <td>2023-01-14</td>
-                            <td>Jan Kowalski</td>
-                        </tr>
-                        <tr>
-                            <td>Najnowsze wiadomości 2<br>
-                                <input type="submit" value="Edytuj">
-                                <input type="submit" value="Usuń"></td>
-                            <td>2023-01-11</td>
-                            <td>Anna Nowak</td>
-                        </tr>
-                        <tr>
-                            <td>Starsze wiadomości<br>
-                                <input type="submit" value="Edytuj">
-                                <input type="submit" value="Usuń"></td>
-                            <td>2022-12-17</td>
-                            <td>Jan Kowalski</td>
-                        </tr>
-                        <tr>
-                            <td>I jeszcze starsze wiadomości<br>
-                                <input type="submit" value="Edytuj">
-                                <input type="submit" value="Usuń"></td>
-                            <td>2021-11-20</td>
-                            <td>Anna Nowak</td>
-                        </tr>
-                    </table>
-                </div>                   
+                <article>
+                    <h2 id="title">Sernik waszych marzeń</h2>
+                    <h3>Autor/-ka: Jan Kowalski</h3>
+                    <h3>Data: 09.11.2024</h3>
+                    <p id="description">Przygotowałem sernik z waszej strony głównej. Niesamowite wrażenia!</p>
+                    
+                    <button onclick="editArticle()">Edytuj</button>   
+                </article>
+
+                <article>
+                    <h2 id="title2">Warto spróbować!</h2>
+                    <h3>Autor/-ka: Anna Nowak</h3>
+                    <h3>Data: 14.12.2024</h3>
+                    <p id="description2">Spis moich ulubionych przepisów ze strony "Dom Pączków":
+                        faworki, sernik, makowiec.
+                    </p>
+                    
+                    <button onclick="editArticle2()">Edytuj</button>   
+                </article>
+                                                   
             </div>
         </div>
     </main>
