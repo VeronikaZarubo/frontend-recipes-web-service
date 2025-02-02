@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
         <link rel="stylesheet" href="style.css">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="icon" href="Images/icon.ico" type="image/x-icon">
     </head>
 <body>  
@@ -16,12 +18,7 @@
             <div class="navbar">
                 <div class="navbar-logo"></div>
                 <div class="navbar-links">
-                    <input id="menu-toggle" type="checkbox" />
-                    <label class='menu-button-container' for="menu-toggle">
-                        <div class='menu-button'></div>
-                    </label>
-                    <ul class="navbar-links-list">
-                        <!-- <li><button class="burger-icon"><i class="ti ti-menu-2"></i></button></li> -->
+                    <ul id="navbar-links-list" class="navbar-links-list">
                         <li class="navbar-links-list-item">
                             <a href="index.html#home" class="primary">Home</a>
                         </li>
@@ -36,11 +33,50 @@
                         </li>
                     </ul>
                 </div>
-                <a href="login.html"><div class="navbar-logout-button"></div></a>
+                <div class="burger-icon">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a></div>
+                <a href="login.html"><div class="navbar-logout-button">
+                    <img src="Images/logout_bezbg.png" alt="post-image"> 
+                </div></a>
             </div>
         </div>
     </nav>   
-    <main>  
+    <main> 
+        <script>
+            function myFunction() {
+            var x = document.getElementById("navbar-links-list");
+            
+            if (window.innerWidth > 768) {
+                x.style.display = "flex"; 
+            } else {
+
+                if (x.style.display === "block") {
+                x.style.display = "none";
+                } else {
+                x.style.display = "block";
+                }
+            }
+            }
+        </script>
+        <script>
+            var x = document.getElementById("navbar-links-list");
+
+            if (window.innerWidth <= 768) {
+                    x.style.display = "none"; 
+                } else{
+                    x.style.display = "flex";
+                } 
+                
+            window.addEventListener('resize', function(event) {
+                if (window.innerWidth <= 768) {
+                    x.style.display = "none"; 
+                } else{
+                    x.style.display = "flex";
+                }         
+            }, true);
+        </script>
         <div class="recipe-hero-img-faworki">
             <div class="recipe-hero-text">
                 <h1>Faworki (chrust)</h1>
