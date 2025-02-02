@@ -466,6 +466,7 @@ table, th, td {
   border-collapse: collapse;
   table-layout: fixed;
 }
+
 button{
     background-color: #b98850;
     color: ivory;
@@ -581,16 +582,19 @@ button{
     vertical-align: middle;
   }
 
-  .profile-content input[type=submit] {
+  .profile-content input[type=submit],
+  .profile-content a {
     background-color: #b98850;
     color: ivory;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
   }
 
-  .profile-content input[type=submit]:hover{
+  .profile-content input[type=submit]:hover,
+  .profile-content a:hover{
     background-color: #f0a00c;
   }
 
@@ -604,8 +608,7 @@ button{
 }
 article{
     display: block;
-    align-self:flex-start ;
-    margin: 10px;
+    align-self:flex-start;
     padding: 10px 20px;
     border: 1px solid #804f17;
     border-radius: 8px;
