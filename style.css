@@ -624,19 +624,38 @@ tr:nth-child(2n){
 table.posts th,
 table.posts td {
   border: 1px solid #804f17;
-  padding: 10px;
+  padding: 20px;
   color: #804f17;
 }
 
 table.posts td:first-child, table.posts th:first-child
 {
   border-left: none;
-  width: 35%;
+  width: 20%;
+}
+
+table.posts td:last-child, table.posts th:last-child
+{
+  width: 20%;
 }
 
 table.posts tr:last-child {
-  border-bottom: none;
- 
+  border-bottom: none; 
+}
+
+table.posts a{
+  text-decoration: none;
+  background-color: #b98850;
+  color: ivory;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+table.posts a:hover{
+  background-color: #f0a00c;
 }
 
 /* reports */

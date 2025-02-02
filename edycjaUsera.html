@@ -12,6 +12,35 @@
 
         <link rel="icon" href="Images/icon.ico" type="image/x-icon">
 
+        <script> 
+            
+            const users = [
+                { id: 1, firstName: "Jan", lastName: "Kowalski", email: "jan.kowalski@example.com", phone: "382-499-231", bio: "Cześć wszystkim! Nazywam się Jan Kowalski i jestem pasjonatem i amatorem poskich wypieków.", photo: "path/to/photo1.jpg" },
+                { id: 2, firstName: "Anna", lastName: "Nowak", email: "anna.nowak@example.com", phone: "649-884-323", bio: "Makowiec jest zawsze smaczniej za sernik!! Niech nikt mi nie mówi inaczej!.", photo: "path/to/photo2.jpg" },
+                { id: 3, firstName: "Zofia", lastName: "Nowak", email: "zofia.nowak@example.com", phone: "110-373-127", bio: "Lubię szukać i spróbować nowych przepisów.", photo: "path/to/photo3.jpg" },
+                { id: 4, firstName: "Jakub", lastName: "Wróbel", email: "jakub.wrobel@example.com", phone: "839-536-003", bio: "Gotowanie to moja pasja.", photo: "path/to/photo4.jpg" }
+            ];
+         
+            function fillForm() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const userId = parseInt(urlParams.get('id')); // Pobierz id z URL
+    
+               
+                const user = users.find(u => u.id === userId);
+    
+                if (user) {
+                    document.getElementById('firstName').value = user.firstName;
+                    document.getElementById('lastName').value = user.lastName;
+                    document.getElementById('email').value = user.email;
+                    document.getElementById('phone').value = user.phone;
+                    document.getElementById('bio').value = user.bio;
+              
+                }
+            }   
+          
+            window.onload = fillForm;
+        </script>
+
     </head>
 <body>  
     <nav>
@@ -41,7 +70,7 @@
                     </a></div>
                 <a href="profile.html"><div class="navbar-profile-button"></div></a>
                 <a href="login.html"><div class="navbar-logout-button">
-                    <img src="Images/logout_bezbg.png" alt="post-image"> 
+                    <img src="Images/logout_bezbg.png" alt="znak logowania"> 
                 </div></a>
             </div>
         </div>
@@ -83,18 +112,31 @@
 
         <div class="wrapper">            
             <div class="profile-content">
-                <h1>Edycja ogłoszenia</h1>
-                <form id="post" action="posty.html" method="GET">
+                <h1>Edycja użytkownika</h1>        
+       
+                <form id="editForm">
+                    <label for="firstName">Imię:</label>
+                    <input type="text" id="firstName" name="firstName" required><br><br>
 
-                    <label for="title">Tytuł ogłoszenia:</label>
-                    <input type="text" id="title" name="title" required>    
+                    <label for="lastName">Nazwisko:</label>
+                    <input type="text" id="lastName" name="lastName" required><br><br>
 
-                    <label for="description">Opis ogłoszenia:</label>
-                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
 
-                    <button type="submit">Zatwierdź zmiany</button>
-                </form>
-                                   
+                    <label for="phone">Telefon:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+
+                    <label for="photo">Zdjęcie:</label>
+                    <input type="file" id="photo" name="photo"><br><br>
+
+                    <form action="backend.html">
+                        <input type="submit" value="Zapisz ">
+                    </form>  
+                </form>                                   
             </div>
         </div>
     </main>
@@ -102,6 +144,14 @@
     <footer>
         <small>&copy; Dom Pączków</small>
     </footer>
+
+    <script>
+        document.getElementById("editForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            alert("Zmiany zostały zapisane!"); 
+            window.location.href = "backend.html"; 
+        });
+    </script>
 
 </body>
 
