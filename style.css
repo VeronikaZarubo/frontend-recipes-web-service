@@ -71,16 +71,15 @@ li.navbar-links-list-item a{
     font-weight: 500;
 }
 
-.navbar-logout-button{
+.navbar-logout-button img{
     display: flex;
-    width: 25px;
-    height: 25px;    
-    margin-bottom: 45px; 
+    width: 35px;
+    height: 35px;    
+    margin-bottom: 37px; 
     margin-right: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-
 }
 
 .navbar-profile-button{
@@ -397,6 +396,10 @@ section{
     margin-bottom: 100px;
 }
 
+#contact label{
+  color: #ecd1b3;
+}
+
 #posty h1{
   color:bisque;
   margin: 25px;
@@ -533,7 +536,7 @@ button{
     line-height:180%
   }
 
-  .container ul, li{
+  .container ul, .container li{
     color: #ecd1b3;
   }
 
@@ -601,13 +604,14 @@ button{
 }
 article{
     display: block;
-    align-self:center ;
+    align-self:flex-start ;
     margin: 10px;
     padding: 10px 20px;
     border: 1px solid #804f17;
     border-radius: 8px;
     color: #804f17;
     font-size: 16px;
+    width: 90%;
 }
 
 table.posts{
@@ -631,12 +635,17 @@ table.posts td {
 table.posts td:first-child, table.posts th:first-child
 {
   border-left: none;
+  width: 10%;
+}
+
+table.posts td:nth-child(2n), table.posts th:nth-child(2n)
+{
   width: 20%;
 }
 
 table.posts td:last-child, table.posts th:last-child
 {
-  width: 20%;
+  width: 10%;
 }
 
 table.posts tr:last-child {
