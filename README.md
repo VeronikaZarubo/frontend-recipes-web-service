@@ -10,8 +10,7 @@ Frontend made with HTML5, CSS and JavaScript for the needs of a recipe web page,
 
 ![image](https://github.com/user-attachments/assets/4744d2fd-b8f3-4841-8247-3184de78664f)
 
-![image](https://github.com/user-attachments/assets/a88a183a-d2d1-4ca8-83bb-476b6a6054dc)
-
+![image](https://github.com/user-attachments/assets/826ae993-e883-44ae-811e-78120c40d2e2)
 ![image](https://github.com/user-attachments/assets/21acc37f-2515-458e-909d-66082b3c1f42)
 
 
